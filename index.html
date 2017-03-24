@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Libro de vistas</title>
+</head>
+<body>
+	<h1> Libro de visitas</h1>
+	<h2>Artículos</h2>
+	<span></span>
+
+	<hr>
+<!-- Agregar comentatios anteriores-->
+	<h3>Crear artículos</h3>
+	<form name="formulario">
+		<button name="textoGrande">Texto Grande</button>
+		<button name="textoMediano" onclick="fontsize();">Texto Mediano</button>
+		<button name="textoChico">Texto Chico</button>
+		<button name="colorTexto">Color de Texto</button>
+		<button name="colorFondo">Color de fondo</button>
+		<button name="alinearIzquierda">Alinear izquierda</button>
+		<button name="justificar">Justificado</button>
+		<button name="alinearDerecha">Alinear Derecha</button>
+		<textarea name = "message" rows = "10" cols = "108" id = "contenido" oninput = "vistaPrevia()" ></textarea>	
+	</form>
+	<hr>
+
+	<h3>Contenido</h3>
+	<span id="vista"></span>
+	<button name="contenido">Contenido</button>
+
+	<script type="text/javascript" src="./assets/js/javascript.js"></script>
+</body>
+</html>
