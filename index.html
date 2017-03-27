@@ -2,31 +2,42 @@
 <html>
 <head>
 	<title>Libro de vistas</title>
+	<link rel="stylesheet" href="./assets/css/style.css">
+
 </head>
 <body>
-	<h1> Libro de visitas</h1>
-	<h2>Artículos</h2>
-	<span></span>
-
-	<hr>
+	<h1> LIBRO DE VISITAS</h1>
+	<h2> COMENTARIOS </h2>
+	<section id="espacioComentarios">
+		<ul>
+				<li type="none"  id="comentariosPublicados">
+					<div name="comentariosEnviados">
+					</div>
+				</li>
+			</ul>
+</section>
 <!-- Agregar comentatios anteriores-->
-	<h3>Crear artículos</h3>
+	<h3>Crear comentario</h3>
 	<form name="formulario">
-		<button name="textoGrande">Texto Grande</button>
-		<button name="textoMediano" onclick="fontsize();">Texto Mediano</button>
-		<button name="textoChico">Texto Chico</button>
-		<button name="colorTexto">Color de Texto</button>
-		<button name="colorFondo">Color de fondo</button>
-		<button name="alinearIzquierda">Alinear izquierda</button>
-		<button name="justificar">Justificado</button>
-		<button name="alinearDerecha">Alinear Derecha</button>
-		<textarea name = "message" rows = "10" cols = "108" id = "contenido" oninput = "vistaPrevia()" ></textarea>	
+		<button type="button" name="textoGde" onclick="textoGrande()">Texto Grande</button>
+		<button type="button" name="textoMed" onclick="textoMediano()">Texto Mediano</button>
+		<button type="button" name="textoChi" onclick="textoChico()">Texto Chico</button>
+		<button type="button" name="colorTexto" onclick="cambioColorTexto()">Color de Texto</button>
+		<button type="button" name="colorFondo" onclick="cambioColorFondo()">Color de fondo</button>
+		<button type="button" name="alinearIzquierda" onclick="alineacionIzquierda()">Alinear izquierda</button>
+		<button type="button" name="justificar" onclick ="alineacionCentro()">Centrado</button>
+		<button type="button" name="alinearDerecha" onclick ="alineacionDerecha()">Alinear Derecha</button>
+			<br/>
+			<br/>
+		<textarea name ="message" rows ="4" cols ="110" id="contenido" oninput="vistaPrevia()" placeholder="Introduce tu comentario :)"> </textarea>
+
 	</form>
+
 	<hr>
 
-	<h3>Contenido</h3>
-	<span id="vista"></span>
-	<button name="contenido">Contenido</button>
+	<h3>Vista previa</h3>
+	<p id="vista"></p>
+	<button type="button" name="contenido" onclick="publicarComentario()">Enviar</button>
 
 	<script type="text/javascript" src="./assets/js/javascript.js"></script>
 </body>
